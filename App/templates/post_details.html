@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+
+<h1>Post NO : {{post.id}}</h>
+
+
+{% block content %}
+    <div>
+       <p><em>{{post.title}}</em>written by Author :<i>{{post.author}}</i> post</p>
+       <p>Content : {{post.content}}</p>
+   
+    <a href="{% url 'articles'%}">Go back</a>
+    <h3><a href="{% url 'details' post.id %}">{{post.title}}</a> </h3>
+
+    {% endblock content %}
+
+
+
+    </div>
